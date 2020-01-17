@@ -3,10 +3,10 @@ import { Row, Col } from 'react-bootstrap';
 import { useTabletop } from '../../../hooks/useTableTop';
 import { ChallangeCard } from '../../ChallangeCard';
 
+const key = process.env.REACT_APP_CHALLANGES_SHEET;
+
 export function Home() {
-  const SHEET_DATA = useTabletop(
-    '1oJILNOm3Y3dosTpD2CdZhiscwz_JjsOj-ebe-leSLA4'
-  );
+  const SHEET_DATA = useTabletop(key);
 
   if (SHEET_DATA.length === 0) {
     return <h1> Carregando... </h1>;
