@@ -9,7 +9,6 @@ export function useTabletop(key) {
       key,
       callback: (data) => {
         updateSheetData(data);
-        console.log(data);
       },
       simpleSheet: true
     });
