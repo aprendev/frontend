@@ -1,5 +1,5 @@
-import React from 'react';
 import MaterialIcon from 'material-icons-react';
+import React from 'react';
 
 export function MemberCard(props) {
   const { name, level, licenca } = props;
@@ -17,12 +17,13 @@ export function MemberCard(props) {
         <img
           src="https://images-na.ssl-images-amazon.com/images/I/81-yKbVND-L._SY355_.png"
           style={{ width: 30 }}
+          alt=""
         />
         <b style={{ justifySelf: 'end', padding: 15 }}>{name}</b>
       </div>
       <div>
         <span>{level} </span>
-        {licenca == 'true' && <MaterialIcon size={16} icon="verified_user" />}
+        {licenca === 'true' && <MaterialIcon size={16} icon="verified_user" />}
       </div>
     </div>
   );
