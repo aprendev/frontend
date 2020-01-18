@@ -3,7 +3,7 @@ import { Row, Col } from 'react-bootstrap';
 import { useTabletop } from '../../../hooks/useTableTop';
 import { ChallangeCard } from '../../ChallangeCard';
 
-const key = process.env.REACT_APP_CHALLANGES_SHEET;
+const key = process.env.REACT_APP_CHALLENGES_SHEET;
 
 export function Home() {
   const SHEET_DATA = useTabletop(key);

@@ -1,7 +1,7 @@
-import { Link } from '@reach/router';
 import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { CustomNavbar } from './styles';
+import { Link } from 'react-router-dom';
 
 export function NavBar() {
   return (
@@ -11,11 +11,20 @@ export function NavBar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link to="/" style={{ color: '#fff' }} as={Link}>
-              Home
+            <Nav.Link>
+              <Link style={{ color: '#fff' }} to="/">
+                Home
+              </Link>
             </Nav.Link>
-            <Nav.Link to="/goal-maker" style={{ color: '#fff' }} as={Link}>
-              Contar meta
+            <Nav.Link>
+              <Link style={{ color: '#fff' }} to="/challenges">
+                Challenges
+              </Link>
+            </Nav.Link>
+            <Nav.Link>
+              <Link style={{ color: '#fff' }} to="/memberlist">
+                Memberlist
+              </Link>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
