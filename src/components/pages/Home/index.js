@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import { useTabletop } from '../../../hooks/useTableTop';
-import { ChallangeCard } from '../../ChallangeCard';
+import { ChallengeCard } from '../../ChallengeCard';
 
 const key = process.env.REACT_APP_CHALLENGES_SHEET;
 
@@ -18,7 +18,7 @@ export function Home() {
         {SHEET_DATA.map((sheetRow, index) => {
           return (
             <Col sm={4} key={index}>
-              <ChallangeCard
+              <ChallengeCard
                 name={sheetRow.name}
                 description={sheetRow.description}
                 level={sheetRow.level}

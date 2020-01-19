@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
 
-export function ChallangeCard(props) {
+export function ChallengeCard(props) {
   const { name, description, level } = props;
   return (
     <>
