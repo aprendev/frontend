@@ -38,6 +38,7 @@ export function MemberCard(props) {
   const cardBodyStyle = { display: 'flex', justifyContent: 'space-between' };
   const avatarStyle = { border: '1px solid #000', width: 30 };
   const cardNameStyle = { padding: 15 };
+  const onLeaveButtonStyle = { backgroundColor: '#fff', border: 'none' };
 
   return (
     <>
@@ -52,11 +53,7 @@ export function MemberCard(props) {
           </span>
           {licenca === 'true' && (
             <Button
-              style={{
-                backgroundColor: '#fff',
-                border: 'none',
-                outline: 'none'
-              }}
+              style={onLeaveButtonStyle}
               onClick={() => handleShowModal()}
             >
               <MaterialIcon size={16} icon="timer" />
