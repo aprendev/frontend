@@ -33,6 +33,7 @@ export function MemberCard(props) {
   const handleShowModal = () => setShowModal(true);
 
   // Styling
+  const cardStyle = { margin: '10px' };
   const cardBackground = warning === 'true' ? '#ffcc00' : '#fff';
   const cardBodyStyle = { display: 'flex', justifyContent: 'space-between' };
   const avatarStyle = { border: '1px solid #000', width: 30 };
@@ -40,7 +41,7 @@ export function MemberCard(props) {
 
   return (
     <>
-      <Card>
+      <Card style={cardStyle}>
         <Card.Header style={{ backgroundColor: cardBackground }}>
           <img style={avatarStyle} src={avatarUrl} alt="" />
           <b style={cardNameStyle}>{name}</b>
