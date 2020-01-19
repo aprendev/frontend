@@ -16,15 +16,25 @@ export function Memberlist() {
     <>
       <Row>
         {MEMBERS_LIST.map((sheetRow, index) => {
+          const {
+            nome,
+            level,
+            licenca,
+            github_username: githubUsername,
+            warning,
+            periodo_licenca: periodoLicenca,
+            turno
+          } = sheetRow;
           return (
             <Col sm={4} key={index}>
               <MemberCard
-                name={sheetRow.nome}
-                level={sheetRow.level}
-                licenca={sheetRow.licenca}
-                github_username={sheetRow.github_username}
-                warning={sheetRow.warning}
-                periodo_licenca={sheetRow.periodo_licenca}
+                name={nome}
+                level={level}
+                licenca={licenca}
+                githubUsername={githubUsername}
+                warning={warning}
+                periodoLicenca={periodoLicenca}
+                turno={turno ? turno : 'Não definido'}
               />
             </Col>
           );

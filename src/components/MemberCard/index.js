@@ -9,9 +9,10 @@ export function MemberCard(props) {
     name,
     level,
     licenca,
-    periodo_licenca: periodoLicenca,
-    github_username: githubUsername,
-    warning
+    periodoLicenca,
+    githubUsername,
+    warning,
+    turno
   } = props;
 
   // State
@@ -50,6 +51,8 @@ export function MemberCard(props) {
         <Card.Body style={cardBodyStyle}>
           <span>
             <b>Level:</b> {level}
+            <br />
+            <b>Turno:</b> {turno}
           </span>
           {licenca === 'true' && (
             <Button
