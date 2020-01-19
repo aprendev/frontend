@@ -14,9 +14,6 @@ export function App() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route exact path="/challenges">
-            <Home />
-          </Route>
           <Route exact path="/memberlist">
             <Memberlist />
           </Route>
