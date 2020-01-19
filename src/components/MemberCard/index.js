@@ -1,7 +1,7 @@
 import axios from 'axios';
 import MaterialIcon from 'material-icons-react';
 import React, { useState, useEffect } from 'react';
-import { Card, Button } from 'react-bootstrap';
+import { Card, Button, Row, Col } from 'react-bootstrap';
 import { OnLeaveModal } from './OnLeaveModal';
 
 export function MemberCard(props) {
@@ -12,7 +12,8 @@ export function MemberCard(props) {
     periodoLicenca,
     githubUsername,
     warning,
-    turno
+    turno,
+    atividadesEntreges
   } = props;
 
   // State
@@ -45,8 +46,22 @@ export function MemberCard(props) {
     <>
       <Card style={cardStyle}>
         <Card.Header style={{ backgroundColor: cardBackground }}>
-          <img style={avatarStyle} src={avatarUrl} alt="" />
-          <b style={cardNameStyle}>{name}</b>
+          <Row>
+            <Col>
+              <img style={avatarStyle} src={avatarUrl} alt="" />
+              <b style={cardNameStyle}>{name}</b>
+            </Col>
+            <Col bsPrefix="ml-auto">
+              {atividadesEntreges && (
+                <MaterialIcon
+                  title="Meta concluída"
+                  color="#179621"
+                  size={25}
+                  icon="done"
+                />
+              )}
+            </Col>
+          </Row>
         </Card.Header>
         <Card.Body style={cardBodyStyle}>
           <span>

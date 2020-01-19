@@ -23,7 +23,8 @@ export function Memberlist() {
             github_username: githubUsername,
             warning,
             periodo_licenca: periodoLicenca,
-            turno
+            turno,
+            atividades_entregues: atividadesEntreges
           } = sheetRow;
           return (
             <Col sm={4} key={index}>
@@ -35,6 +36,7 @@ export function Memberlist() {
                 warning={warning}
                 periodoLicenca={periodoLicenca}
                 turno={turno ? turno : 'Não definido'}
+                atividadesEntreges={atividadesEntreges}
               />
             </Col>
           );
