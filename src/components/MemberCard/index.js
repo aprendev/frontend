@@ -13,7 +13,7 @@ export function MemberCard(props) {
     githubUsername,
     warning,
     turno,
-    atividadesEntreges
+    atividadesEntregues
   } = props;
 
   // State
@@ -52,7 +52,7 @@ export function MemberCard(props) {
               <b style={cardNameStyle}>{name}</b>
             </Col>
             <Col bsPrefix="ml-auto">
-              {atividadesEntreges && (
+              {atividadesEntregues !== 0 && (
                 <MaterialIcon
                   title="Meta concluída"
                   color="#179621"
@@ -68,12 +68,8 @@ export function MemberCard(props) {
             <b>Level:</b> {level}
             <br />
             <b>Turno:</b> {turno}
-            {atividadesEntreges && (
-              <>
-                <br />
-                <b>Atividades Entregues:</b> {atividadesEntreges}
-              </>
-            )}
+            <br />
+            <b>Atividades Entregues:</b> {atividadesEntregues}
           </span>
           {licenca === 'true' && (
             <Button
