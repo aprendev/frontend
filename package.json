@@ -2,6 +2,17 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "format:raw": "prettier --write",
+    "format": "yarn format:raw '**/*.{js,jsx,ts,tsx,json,vue,css,scss,less,graphql,gql,md,mdx,yml,yaml}'",
+    "lint": "yarn lint:raw .",
+    "lint:fix": "yarn lint:raw --fix .",
+    "lint:raw": "eslint --ext .js,.jsx,.ts,.tsx --max-warnings=0",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
   "dependencies": {
     "@reach/router": "^1.2.1",
     "@testing-library/jest-dom": "^4.2.4",
@@ -19,17 +30,11 @@
     "styled-components": "^5.0.0",
     "tabletop": "^1.6.2"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "lffg",
-      "lffg-react"
-    ]
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-lffg": "^10.0.1",
+    "eslint-config-lffg-react": "^2.0.0",
+    "prettier": "^1.19.1"
   },
   "browserslist": {
     "production": [
@@ -42,10 +47,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "eslint": "^6.8.0",
-    "eslint-config-lffg": "^10.0.1",
-    "eslint-config-lffg-react": "^2.0.0"
   }
 }
