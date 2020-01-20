@@ -68,6 +68,12 @@ export function MemberCard(props) {
             <b>Level:</b> {level}
             <br />
             <b>Turno:</b> {turno}
+            {atividadesEntreges && (
+              <>
+                <br />
+                <b>Atividades Entregues:</b> {atividadesEntreges}
+              </>
+            )}
           </span>
           {licenca === 'true' && (
             <Button
