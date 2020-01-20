@@ -1,4 +1,4 @@
-* @Goufix
+*/** @Goufix
 
-.github/* @lffg
-./* @lffg
+.github/**/* @lffg
+README.md @lffg
