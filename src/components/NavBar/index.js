@@ -14,6 +14,9 @@ export function NavBar() {
             <Link style={{ color: '#fff', padding: 15 }} to="/">
               Home
             </Link>
+            <Link style={{ color: '#fff', padding: 15 }} to="/challenges">
+              Challenges
+            </Link>
             <Link style={{ color: '#fff', padding: 15 }} to="/memberlist">
               Memberlist
             </Link>
