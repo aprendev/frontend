@@ -24,7 +24,7 @@ export function Memberlist() {
             warning,
             periodo_licenca: periodoLicenca,
             turno,
-            atividades_entregues: atividadesEntreges
+            atividades_entregues: atividadesEntregues
           } = sheetRow;
           return (
             <Col sm={4} key={index}>
@@ -36,7 +36,9 @@ export function Memberlist() {
                 warning={warning}
                 periodoLicenca={periodoLicenca}
                 turno={turno ? turno : 'Não definido'}
-                atividadesEntreges={atividadesEntreges}
+                atividadesEntregues={
+                  atividadesEntregues ? atividadesEntregues : 0
+                }
               />
             </Col>
           );
