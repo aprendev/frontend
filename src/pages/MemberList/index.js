@@ -1,7 +1,7 @@
 import React from 'react';
-import { Row, Col } from '../../../../node_modules/react-bootstrap';
-import { useTabletop } from '../../../hooks/useTableTop';
-import { MemberCard } from '../../MemberCard';
+import { Row, Col } from 'react-bootstrap';
+import { MemberCard } from '../../components/MemberCard';
+import { useTabletop } from '../../hooks/useTableTop';
 
 const key = process.env.REACT_APP_MEMBERLIST_SHEET;
 
