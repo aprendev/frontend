@@ -1,6 +1,5 @@
-import axios from 'axios';
 import MaterialIcon from 'material-icons-react';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Card, Button, Row, Col } from 'react-bootstrap';
 import { OnLeaveModal } from './OnLeaveModal';
 
@@ -16,19 +15,11 @@ export function MemberCard(props) {
     atividadesEntregues
   } = props;
 
-  // State
-  const [avatarUrl, setAvatarUrl] = useState([]);
-  const [showModal, setShowModal] = useState(false);
+  // Utils
+  const getProfileUrl = (username) => `https://github.com/${username}`;
 
-  useEffect(() => {
-    async function getGithubAvatar() {
-      const { data } = await axios.get(
-        `https://api.github.com/users/${githubUsername}`
-      );
-      setAvatarUrl(data.avatar_url);
-    }
-    getGithubAvatar();
-  });
+  // State
+  const [showModal, setShowModal] = useState(false);
 
   // Handlers
   const handleCloseModal = () => setShowModal(false);
@@ -48,7 +39,11 @@ export function MemberCard(props) {
         <Card.Header style={{ backgroundColor: cardBackground }}>
           <Row>
             <Col>
-              <img style={avatarStyle} src={avatarUrl} alt="" />
+              <img
+                style={avatarStyle}
+                src={`${getProfileUrl(githubUsername)}.png`}
+                alt={`Avatar de ${githubUsername}`}
+              />
               <b style={cardNameStyle}>{name}</b>
             </Col>
             <Col bsPrefix="ml-auto">
