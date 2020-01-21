@@ -7,7 +7,7 @@ export function NavBar() {
   return (
     <CustomNavbar variant="dark" expand="lg" className="mb-3">
       <Container>
-        <Navbar.Brand href="#home">Aprendev</Navbar.Brand>
+        <Navbar.Brand>Aprendev</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
