@@ -1,5 +1,7 @@
 # 📚 [Aprendev](https://aprendev.netlify.com/)
 
+[![ESLint CI GitHub Action](https://github.com/aprendev-hq/aprendev/workflows/ESLint%20CI/badge.svg)](https://github.com/aprendev-hq/aprendev/actions?query=workflow%3A%22ESLint+CI%22)
+
 Uma semana, um novo desafio. Desenvolva habilidades para a programação.
 
 ### ℹ️ Sobre
