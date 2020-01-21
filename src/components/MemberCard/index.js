@@ -39,11 +39,18 @@ export function MemberCard(props) {
         <Card.Header style={{ backgroundColor: cardBackground }}>
           <Row>
             <Col>
-              <img
-                style={avatarStyle}
-                src={`${getProfileUrl(githubUsername)}.png`}
-                alt={`Avatar de ${githubUsername}`}
-              />
+              <a
+                href={getProfileUrl(githubUsername)}
+                target="_blank"
+                without
+                rel="noopener noreferrer"
+              >
+                <img
+                  style={avatarStyle}
+                  src={`${getProfileUrl(githubUsername)}.png`}
+                  alt={`Avatar de ${githubUsername}`}
+                />
+              </a>
               <b style={cardNameStyle}>{name}</b>
             </Col>
             <Col bsPrefix="ml-auto">
