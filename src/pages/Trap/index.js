@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function Admin() {
+export function Trap() {
   return (
     <>
       <iframe

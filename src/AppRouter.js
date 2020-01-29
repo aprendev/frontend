@@ -1,10 +1,10 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { useLocationTracker } from './hooks/useLocationTracker';
-import { Admin } from './pages/Admin';
 import { Home } from './pages/Home';
 import { Memberlist } from './pages/MemberList';
 import { Presentation } from './pages/Presentation';
+import { Trap } from './pages/Trap';
 
 export function AppRouter() {
   // Metrics:
@@ -16,7 +16,7 @@ export function AppRouter() {
         <Presentation />
       </Route>
       <Route exact path="/admin.php">
-        <Admin />
+        <Trap />
       </Route>
       <Route exact path="/Challenges">
         <Home />
