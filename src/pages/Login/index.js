@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom';
 import { api } from '../../services/api';
 import { login } from '../../services/auth';
 
-export function Login(props) {
+export function Login() {
   const history = useHistory();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
