@@ -20,10 +20,10 @@ export function AppRouter() {
         <Login />
       </Route>
       <AuthRoute exact path="/home" component={() => <Presentation />} />
-      <AuthRoute exact path="/admin.php" component={() => <Trap />} />
       <AuthRoute exact path="/challenges" component={() => <Home />} />
       <AuthRoute exact path="/memberlist" component={() => <Memberlist />} />
       <AdminRoute exact path="/admin" component={() => <Admin />} />
+      <AuthRoute exact path="/admin.php" component={() => <Trap />} />
     </Switch>
   );
 }
