@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import { isAuthenticated } from '../../services/auth';
+import { Link, useHistory } from 'react-router-dom';
+import { isAuthenticated, logout } from '../../services/auth';
 import { CustomNavbar } from './styles';
 
 export function NavBar() {
   const [isAutorizedUser, setIsAutorizedUser] = useState(false);
+  const history = useHistory();
 
   useEffect(() => {
     async function validateAuth() {
@@ -36,7 +37,13 @@ export function NavBar() {
           </Nav>
           {isAutorizedUser && (
             <Nav className="ml-auto">
-              <Link style={linkStyle} to="/logout">
+              <Link
+                style={linkStyle}
+                onClick={() => {
+                  logout();
+                  history.push('/');
+                }}
+              >
                 Sair
               </Link>
             </Nav>
