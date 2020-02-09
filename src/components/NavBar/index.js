@@ -11,7 +11,7 @@ export function NavBar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <Link style={{ color: '#fff', padding: 15 }} to="/">
+            <Link style={{ color: '#fff', padding: 15 }} to="/home">
               Home
             </Link>
             <Link style={{ color: '#fff', padding: 15 }} to="/challenges">
