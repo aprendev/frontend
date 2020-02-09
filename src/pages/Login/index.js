@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Col, Row, Form, Button, Alert } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
+import { NavBar } from '../../components/NavBar';
 import { api } from '../../services/api';
 import { login, isAuthenticated } from '../../services/auth';
 
@@ -51,6 +52,7 @@ export function Login() {
 
   return (
     <>
+      <NavBar />
       {!isAutorizedUser && (
         <Row>
           <Col bsPrefix="col d-flex justify-content-center">

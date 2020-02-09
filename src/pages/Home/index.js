@@ -2,6 +2,7 @@ import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import { ChallengeCard } from '../../components/ChallengeCard';
 import { useTabletop } from '../../hooks/useTableTop';
+import { NavBar } from '../../components/NavBar';
 
 const key = process.env.REACT_APP_CHALLENGES_SHEET;
 
@@ -14,6 +15,7 @@ export function Home() {
 
   return (
     <>
+      <NavBar />
       <Row>
         {SHEET_DATA.map((sheetRow, index) => {
           return (

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import { MemberCard } from '../../components/MemberCard';
+import { NavBar } from '../../components/NavBar';
 import { useTabletop } from '../../hooks/useTableTop';
 
 const key = process.env.REACT_APP_MEMBERLIST_SHEET;
@@ -14,6 +15,7 @@ export function Memberlist() {
 
   return (
     <>
+      <NavBar />
       <Row>
         {MEMBERS_LIST.map((sheetRow, index) => {
           const {

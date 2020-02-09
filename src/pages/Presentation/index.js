@@ -1,10 +1,12 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import Typing from 'react-typing-animation';
+import { NavBar } from '../../components/NavBar';
 
 export function Presentation() {
   return (
     <>
+      <NavBar />
       <Row>
         <Col />
         <Col>
