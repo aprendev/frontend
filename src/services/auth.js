@@ -1,4 +1,3 @@
-// import jwtDecode from 'jwt-decode';
 import { api } from './api';
 
 export const TOKEN_KEY = 'AUTH_TOKEN';
