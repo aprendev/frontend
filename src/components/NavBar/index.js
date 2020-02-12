@@ -43,6 +43,7 @@ export function NavBar() {
                   logout();
                   history.push('/');
                 }}
+                to=""
               >
                 Sair
               </Link>
