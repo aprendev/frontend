@@ -4,7 +4,6 @@ export const TOKEN_KEY = 'AUTH_TOKEN';
 export const isAuthenticated = async () => {
   const token = getToken();
   const { data } = await api.get('/validateToken', token);
-  console.log(data.isValidToken);
   if (data.isValidToken) {
     return true;
   } else {
