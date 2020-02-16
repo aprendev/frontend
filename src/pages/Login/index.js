@@ -16,11 +16,11 @@ export function Login() {
     async function validateAuth() {
       const response = await isAuthenticated();
       setIsAutorizedUser(response);
+      if (isAutorizedUser) {
+        history.push('/home');
+      }
     }
     validateAuth();
-    if (isAutorizedUser) {
-      history.push('/home');
-    }
   }, [history, isAutorizedUser]);
 
   async function handleSubmit(event) {
@@ -28,11 +28,11 @@ export function Login() {
 
     function loginError(err) {
       try {
-        const errorMessage = err.response.data.message;
-        const error = errorMessage
+        let errorMessage = err.response.data.message;
+        errorMessage = errorMessage
           .substr(errorMessage.indexOf(': '), 1000)
           .replace(': ', '');
-        setLoginError(error);
+        setLoginError(errorMessage);
       } catch {
         setLoginError('Erro desconhecido');
       }
