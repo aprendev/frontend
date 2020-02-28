@@ -1,6 +1,6 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
-import Typing from 'react-typing-animation';
+import TypeText from 'react-typing-animation';
 import { NavBar } from '../../components/NavBar';
 
 export function Presentation() {
@@ -10,7 +10,7 @@ export function Presentation() {
       <Row>
         <Col />
         <Col>
-          <Typing speed={30}>
+          <TypeText speed={30}>
             Seja bem vindo ao <b>Aprendev</b>!
             <hr />
             Aqui você vai encontrar desafios semanais que devem ser entregues
@@ -28,7 +28,7 @@ export function Presentation() {
             <b>Se eu for expulso, eu posso voltar?</b>
             <b> R:</b> Sim, porém você irá retornar ocupando o level{' '}
             <b>aprendiz</b> e terá seus pontos <b>zerados</b>.
-          </Typing>
+          </TypeText>
         </Col>
         <Col />
       </Row>
