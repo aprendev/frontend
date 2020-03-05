@@ -44,7 +44,7 @@ export function Login() {
         password
       })
       .then(({ data }) => {
-        login(data.tokens.token);
+        login(data.tokens.token, JSON.stringify(data.user));
         history.push('/home');
       })
       .catch((err) => loginError(err));
