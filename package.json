@@ -32,7 +32,7 @@
     "tabletop": "^1.6.2"
   },
   "devDependencies": {
-    "eslint": "^6.8.0",
+    "eslint": "^9.26.0",
     "eslint-config-lffg": "^10.0.1",
     "eslint-config-lffg-react": "^2.0.0",
     "prettier": "^1.19.1"
